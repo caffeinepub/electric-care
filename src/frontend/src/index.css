@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Cabinet Grotesk (Display) ── */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Plus Jakarta Sans (Body) ── */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Electric Care Palette */
+    --background: 0.978 0.008 90;
+    --foreground: 0.18 0.04 264;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 264;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 264;
+
+    /* primary: electric blue */
+    --primary: 0.32 0.15 264;
+    --primary-foreground: 0.99 0 0;
+
+    /* secondary: electric yellow */
+    --secondary: 0.865 0.195 90;
+    --secondary-foreground: 0.18 0.04 264;
+
+    --muted: 0.955 0.012 90;
+    --muted-foreground: 0.5 0.06 264;
+
+    --accent: 0.93 0.08 90;
+    --accent-foreground: 0.18 0.04 264;
+
+    /* destructive: red */
+    --destructive: 0.58 0.23 25;
+    --destructive-foreground: 0.99 0 0;
+
+    /* success: green */
+    --success: 0.55 0.17 145;
+    --success-foreground: 0.99 0 0;
+
+    --warning: 0.78 0.16 72;
+    --warning-foreground: 0.18 0.04 264;
+
+    --border: 0.9 0.02 264;
+    --input: 0.93 0.02 264;
+    --ring: 0.32 0.15 264;
+
+    --chart-1: 0.32 0.15 264;
+    --chart-2: 0.865 0.195 90;
+    --chart-3: 0.55 0.17 145;
+    --chart-4: 0.58 0.23 25;
+    --chart-5: 0.78 0.16 72;
+
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.18 0.04 264;
+    --sidebar-primary: 0.32 0.15 264;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.955 0.012 90;
+    --sidebar-accent-foreground: 0.18 0.04 264;
+    --sidebar-border: 0.9 0.02 264;
+    --sidebar-ring: 0.32 0.15 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+/* ── Referral card purple gradient ── */
+.refer-gradient {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+/* ── Focus styles ── */
+:focus-visible {
+  outline: 2px solid oklch(0.32 0.15 264);
+  outline-offset: 2px;
+}
